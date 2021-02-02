@@ -1,6 +1,12 @@
 package com.javarush.task.task22.task2213;
 
+import java.sql.SQLOutput;
+
 public class Field {
+    private int width;
+    private int height;
+    private int[][] matrix;
+
     public Field(int width, int height) {
         this.width = width;
         this.height = height;
@@ -31,7 +37,35 @@ public class Field {
         this.matrix = matrix;
     }
 
-    private int width;
-    private int height;
-    private int[][] matrix;
+/*    public static void main(String... args){
+        Field field = new Field(5,5);
+        field.print();
+    }*/
+    public void print (){
+        for(int y = 0;y<height;y++){
+            for (int x = 0; x<width; x++){
+                if (matrix[y][x]==0){
+                    System.out.print(".");
+                }else {
+                    System.out.print("X");
+                }
+            }
+            System.out.println("");
+        }
+
+    }
+
+    public  void removeFullLines(){
+
+    }
+
+    public Integer getValue(int x, int y){
+        return null;
+    }
+
+    public void setValue(int x, int y, int value){
+        
+    }
+
+
 }
