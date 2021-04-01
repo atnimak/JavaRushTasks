@@ -3,33 +3,24 @@ package com.javarush.task.task35.task3513;
 import java.awt.*;
 
 public class Tile {
-    int value;
+    int value = 0;
 
-    public Tile(int value) {
-        this.value = value;
+    Tile() {
     }
 
-    public Tile() {
-        this.value = 0;
+    Tile(int num) {
+        value = num;
     }
 
     public boolean isEmpty() {
-        if (value == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return value == 0;
     }
 
-    public Color getFontColor() {
-        if (value < 16) {
-            return new Color(0x776e65);
-        } else {
-            return new Color(0xf9f6f2);
-        }
+    Color getFontColor() {
+        return value < 16 ? new Color(0x776e65) : new Color(0xf9f6f2);
     }
 
-    public Color getTileColor() {
+    Color getTileColor() {
         switch (value) {
             case 0:
                 return new Color(0xcdc1b4);
@@ -55,7 +46,9 @@ public class Tile {
                 return new Color(0xedc53f);
             case 2048:
                 return new Color(0xedc22e);
+
+            default:
+                return new Color(0xff0000);
         }
-        return new Color(0xff0000);
     }
 }
