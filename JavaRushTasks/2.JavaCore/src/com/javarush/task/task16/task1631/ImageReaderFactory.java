@@ -1,7 +1,7 @@
 package com.javarush.task.task16.task1631;
 
 import com.javarush.task.task16.task1631.common.*;
-import com.sun.javafx.iio.ImageStorage;
+/*import com.sun.javafx.iio.ImageStorage;*/
 
 /**
  * Created by Maxim on 28.03.2017.
